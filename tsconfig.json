@@ -16,6 +16,8 @@
     "paths": {
       "$components/*": ["./src/components/*"],
       "$modules/*": ["./src/modules/*"],
+      "$styles/*": ["./styles/*"],
+      "$icons/*": ["./src/icons/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
