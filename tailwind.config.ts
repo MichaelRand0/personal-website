@@ -35,7 +35,7 @@ const config: Config = {
     colors: {
       brand: "#4bffa5",
       bgBlack: "#101010",
-      grey: "#888888",
+      grey: "#b0b0b0",
       greyStrong: "#1e1e1e",
     },
   },

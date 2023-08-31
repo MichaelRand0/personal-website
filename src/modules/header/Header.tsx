@@ -5,7 +5,7 @@ import Navigation from "$components/navigation/Navigation"
 import MobileMenu from "$modules/mobileMenu/MobileMenu"
 import React, { useState } from "react"
 
-interface Props {}
+interface Props extends React.ComponentProps<'div'> {}
 
 const links = [
   {
@@ -31,9 +31,10 @@ const links = [
 ]
 
 const Header = (props: Props) => {
+  const {className} = props
   const [mobileMenu, setMobileMenu] = useState(false)
   return (
-    <header>
+    <header className={`${className} flex justify-center w-full flex-col`}>
       <Container className="flex justify-between">
         <LinkAnimated
           className="z-50"
