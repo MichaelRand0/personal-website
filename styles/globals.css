@@ -19,3 +19,9 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+@layer utilities {
+  .clip-img {
+    clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
+  }
+}

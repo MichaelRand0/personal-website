@@ -2,7 +2,8 @@ import GrainBg from "$components/GrainBg"
 import Header from "$modules/header/Header"
 import dynamic from "next/dynamic"
 import useMobile from "../src/hooks/mobile"
-import MobileMenu from "$modules/mobileMenu/MobileMenu"
+import Container from "$components/Container"
+import VideoBg from "$components/VideoBg"
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -12,6 +13,7 @@ export default function Home() {
   const { isMobile } = useMobile()
   return (
     <main className="relative h-screen">
+      <VideoBg controls={false} src='/videos/glowing.mp4' />
       <GrainBg />
       <Header />
       {isMobile ? (
@@ -33,6 +35,11 @@ export default function Home() {
           clickables={["a", "select", "textarea", "button"]}
         />
       )}
+      <Container>
+        <section className="relative">
+
+        </section>
+      </Container>
     </main>
   )
 }
