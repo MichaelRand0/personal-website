@@ -14,7 +14,7 @@ const VideoBg = (props: Props) => {
   return (
     <div className="absolute w-full h-full top-0 left-0">
       <video
-        className="w-full h-full object-fill"
+        className="w-full h-full object-cover md:object-fit"
         ref={videoRef}
         controls={false}
         muted

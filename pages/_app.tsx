@@ -1,6 +1,9 @@
+import { store } from "$redux/store"
 import "$styles/globals.css"
 import type { AppProps } from "next/app"
-import { Inter, Roboto } from "next/font/google"
+import { Roboto } from "next/font/google"
+import { Provider } from "react-redux"
+import Layout from "./Layout"
 
 const roboto = Roboto({
   weight: ["400", "300", "500", "700"],
@@ -11,8 +14,12 @@ const roboto = Roboto({
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={roboto.className}>
-      <Component {...pageProps} />
-    </div>
+    <Provider store={store}>
+      <Layout>
+        <div className={roboto.className}>
+          <Component {...pageProps} />
+        </div>
+      </Layout>
+    </Provider>
   )
 }

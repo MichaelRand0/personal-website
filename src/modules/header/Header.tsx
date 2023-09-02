@@ -34,7 +34,7 @@ const Header = (props: Props) => {
   const {className} = props
   const [mobileMenu, setMobileMenu] = useState(false)
   return (
-    <header className={`${className} flex justify-center w-full flex-col`}>
+    <header className={`z-50 flex justify-center w-full flex-col ${className}`}>
       <Container className="flex justify-between">
         <LinkAnimated
           className="z-50"
@@ -64,13 +64,13 @@ const Header = (props: Props) => {
           className="lg:hidden z-50"
           clickEvent={() => setMobileMenu(!mobileMenu)}
         />
+      </Container>
         <MobileMenu
           links={links}
-          className={`${
+          className={`h-full ${
             mobileMenu ? "opacity-100 visible" : "opacity-0 invisible"
           } ease-in-out opacity-0 duration-300 transition-all lg:hidden`}
         />
-      </Container>
     </header>
   )
 }

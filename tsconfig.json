@@ -18,6 +18,9 @@
       "$modules/*": ["./src/modules/*"],
       "$styles/*": ["./styles/*"],
       "$icons/*": ["./src/icons/*"],
+      "$redux/*": ["./src/redux/*"],
+      "$models/*": ["./src/models/*"],
+      "$hooks/*": ["./src/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
