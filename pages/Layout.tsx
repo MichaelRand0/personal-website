@@ -1,8 +1,8 @@
 import ButtonBurger from "$components/ButtonBurger"
 import Container from "$components/Container"
 import LinkAnimated from "$components/LinkAnimated"
+import TilesLoader from "$components/TilesLoader"
 import Navigation from "$components/navigation/Navigation"
-import Header from "$modules/header/Header"
 import MobileMenu from "$modules/mobileMenu/MobileMenu"
 import React, { useState } from "react"
 
@@ -36,6 +36,7 @@ const Layout = (props: Props) => {
   const [mobileMenu, setMobileMenu] = useState(false)
   return (
     <div className="relative h-full">
+      <TilesLoader />
       <header
         className={`z-50 flex justify-center w-full flex-col h-[15vh] absolute top-0 left-0`}
       >
