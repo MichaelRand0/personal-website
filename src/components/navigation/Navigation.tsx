@@ -18,6 +18,7 @@ const Navigation = (props: Props) => {
     <nav className={classNames?.nav}>
       <ul className={`${classNames?.ul}`}>
         {links.map((item) => {
+          console.log('item, ', item)
           return (
             <li key={item.text} className={classNames?.li}>
               {isAnimated ? (

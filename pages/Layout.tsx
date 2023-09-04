@@ -2,6 +2,7 @@ import ButtonBurger from "$components/ButtonBurger"
 import Container from "$components/Container"
 import LinkAnimated from "$components/LinkAnimated"
 import TilesLoader from "$components/TilesLoader"
+import Footer from "$components/footer/Footer"
 import Navigation from "$components/navigation/Navigation"
 import MobileMenu from "$modules/mobileMenu/MobileMenu"
 import React, { useState } from "react"
@@ -11,11 +12,11 @@ interface Props extends React.ComponentProps<"div"> {}
 const links = [
   {
     text: "Главная",
-    href: "#",
+    href: "/",
   },
   {
-    text: "Обо мне",
-    href: "#",
+    text: "Резюме",
+    href: "/resume",
   },
   {
     text: "Портфолио",
@@ -78,6 +79,7 @@ const Layout = (props: Props) => {
         } ease-in-out opacity-0 duration-300 transition-all lg:hidden`}
       />
       {children}
+      <Footer />
     </div>
   )
 }

@@ -53,7 +53,7 @@ const config: Config = {
             top: '0px'
           },
           "100%": {
-            top: '-100vh'
+            top: '-300vh'
           },
         }
       },
