@@ -22,7 +22,7 @@ const Footer = (props: Props) => {
       <Container className="w-full">
         <div className="w-full items-center lg:items-start flex lg:flex-row flex-col justify-between relative">
           <div className="flex">
-            <div className="flex flex-col text-[white] text-sm items-center mb-5 lg:mb-0 lg:items-start lg:mr-10 lg:mr-32">
+            <div className="flex flex-col text-[white] text-sm items-center mb-5 lg:mb-0 lg:items-start lg:mr-32">
               <a
                 className="hover:text-[white] w-fit mb-2"
                 href="mailto:michaelrand2023@gmail.com"

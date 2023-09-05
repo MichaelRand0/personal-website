@@ -55,6 +55,17 @@ const config: Config = {
           "100%": {
             top: '-300vh'
           },
+        },
+        jumping: {
+          "0%": {
+            transform: 'translateY(0%)'
+          },
+          "50%": {
+            transform: 'translateY(30%)'
+          },
+          "100%": {
+            transform: 'translateY(0%)'
+          },
         }
       },
       animationDelay: {
@@ -81,7 +92,8 @@ const config: Config = {
       showDown: "showDown ease-in-out 1",
       scrollTop: "scrollTop ease-out 1",
       scrollBottom: "scrollBottom ease-out 1",
-      hide: "hide 1s linear 1"
+      hide: "hide 1s linear 1",
+      jumping: "jumping 1s linear infinite"
     },
     colors: {
       brand: "#4bffa5",
