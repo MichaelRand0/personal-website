@@ -1,12 +1,10 @@
-import Container from "$components/Container"
-import LinesBg from "$components/LinesBg"
 import SectionPreview from "$components/sections/SectionPreview"
 
 const Resume = () => {
   return (
-    <main className="h-screen">
-      <Container className="max-w-5xl mx-auto">
-        <LinesBg />
+    <main className="h-full">
+      <div className="w-full">
+        
         <SectionPreview
           title="Резюме"
           routes={[
@@ -17,7 +15,10 @@ const Resume = () => {
           ]}
           currentRoute="Резюме"
         />
-      </Container>
+        <section className="pt-20">
+           asdas asda
+        </section>
+      </div>
     </main>
   )
 }

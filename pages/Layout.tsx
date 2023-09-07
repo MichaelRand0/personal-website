@@ -1,5 +1,6 @@
 import ButtonBurger from "$components/ButtonBurger"
 import Container from "$components/Container"
+import LinesBg from "$components/LinesBg"
 import LinkAnimated from "$components/LinkAnimated"
 import TilesLoader from "$components/TilesLoader"
 import Footer from "$components/footer/Footer"
@@ -43,7 +44,10 @@ const Layout = (props: Props) => {
   const { isMobile } = useMobile()
   const [mobileMenu, setMobileMenu] = useState(false)
   return (
-    <div className="relative h-full">
+    <div className="">
+      <Container className="absolute left-[50%] right-[50%] -translate-x-[50%] top-0 max-w-5xl w-full h-full mx-auto z-30">
+        <LinesBg className="absolute left-0 top-0 w-full h-full" />
+      </Container>
       {isMobile ? (
         ""
       ) : (

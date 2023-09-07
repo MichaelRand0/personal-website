@@ -8,7 +8,7 @@ interface Props extends React.ComponentProps<"div"> {
 const Breadcrumb = (props: Props) => {
   const { routes, currentRoute } = props
   return (
-    <div className="z-10">
+    <div className="z-40">
       {routes.map((route) => {
         return (
           <div key={route.href} className="flex items-center text-grey">

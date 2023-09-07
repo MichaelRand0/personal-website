@@ -18,7 +18,7 @@ const socials = [
 const Footer = (props: Props) => {
   const { children } = props
   return (
-    <footer className="lg:fixed bottom-10 left-0 w-full flex justify-between py-10 lg:py-0 bg-greyStrong lg:bg-[transparent]">
+    <footer className="lg:fixed bottom-10 left-0 w-full z-30 flex justify-between py-10 lg:py-0 bg-greyStrong lg:bg-[transparent]">
       <Container className="w-full">
         <div className="w-full items-center lg:items-start flex lg:flex-row flex-col justify-between relative">
           <div className="flex">

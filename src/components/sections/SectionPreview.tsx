@@ -1,6 +1,7 @@
 import Breadcrumb from "$components/Breadcrumb"
 import Container from "$components/Container"
 import GrainBg from "$components/GrainBg"
+import LinesBg from "$components/LinesBg"
 import Arrow from "$icons/Arrow"
 import { Link } from "$models/Link"
 import { useEffect, useState } from "react"
@@ -21,20 +22,20 @@ function SectionPreview(props: Props) {
     }, 1400)
   }, [])
   return (
-    <section className="h-screen w-full pb-10">
-      <GrainBg className="w-full" />
-      <div className="flex flex-col w-full justify-between h-full">
+    <section className="relative h-screen pb-10">
+      <GrainBg />
+      <Container className="flex flex-col w-full justify-between h-full max-w-5xl mx-auto">
         <span></span>
         <h1 className="text-6xl sm:text-8xl lg:text-9xl text-center font-medium">
           {showTitle ? <Typewriter typeSpeed={360} words={[title]} /> : ""}
         </h1>
         <div className="flex items-center justify-between">
           <Breadcrumb routes={routes} currentRoute={currentRoute} />
-          <button className="z-10 p-2 animate-jumping">
+          <button className="z-40 p-2 animate-jumping">
             <Arrow width={25} height={25} />
           </button>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
