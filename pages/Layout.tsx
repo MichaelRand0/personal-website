@@ -6,9 +6,10 @@ import TilesLoader from "$components/TilesLoader"
 import Footer from "$components/footer/Footer"
 import Navigation from "$components/navigation/Navigation"
 import useMobile from "$hooks/mobile"
+import { useScroll } from "$hooks/scroll"
 import MobileMenu from "$modules/mobileMenu/MobileMenu"
 import dynamic from "next/dynamic"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 interface Props extends React.ComponentProps<"div"> {}
 
@@ -43,6 +44,10 @@ const Layout = (props: Props) => {
   const { children } = props
   const { isMobile } = useMobile()
   const [mobileMenu, setMobileMenu] = useState(false)
+  const {scrollPosition} = useScroll()
+  useEffect(() => {
+    console.log('scrollPosition', scrollPosition)
+  }, [scrollPosition])
   return (
     <div className="">
       <Container className="absolute left-[50%] right-[50%] -translate-x-[50%] top-0 max-w-5xl w-full h-full mx-auto -z-10">
@@ -68,7 +73,7 @@ const Layout = (props: Props) => {
         />
       )}
       <header
-        className={`z-50 flex justify-center w-full flex-col h-[15vh] absolute top-0 left-0`}
+        className={`z-50 flex justify-center w-full flex-col fixed top-0 left-0 bg-transparent transition-all ease-in-out duration-500 ${scrollPosition >= 200 ? 'h-[12vh] bg-bgBlack' : 'h-[18vh]'}`}
       >
         <Container className="flex justify-between">
           <LinkAnimated
