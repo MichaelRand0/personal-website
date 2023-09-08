@@ -18,7 +18,7 @@ const socials = [
 const Footer = (props: Props) => {
   const { children } = props
   return (
-    <footer className="lg:fixed bottom-10 left-0 w-full z-30 flex justify-between py-10 lg:py-0 bg-greyStrong lg:bg-[transparent]">
+    <footer className="lg:fixed bottom-7 left-0 w-full z-10 flex justify-between py-10 lg:py-0 bg-greyStrong lg:bg-[transparent]">
       <Container className="w-full">
         <div className="w-full items-center lg:items-start flex lg:flex-row flex-col justify-between relative">
           <div className="flex">
@@ -35,7 +35,7 @@ const Footer = (props: Props) => {
             </div>
             {children}
           </div>
-          <div className="lg:absolute right-0 bottom-10">
+          <div className="lg:absolute right-0 bottom-0">
             <div className="flex lg:flex-col justify-center items-center">
               {socials.map((social) => {
                 return (

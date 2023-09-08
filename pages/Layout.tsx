@@ -45,7 +45,7 @@ const Layout = (props: Props) => {
   const [mobileMenu, setMobileMenu] = useState(false)
   return (
     <div className="">
-      <Container className="absolute left-[50%] right-[50%] -translate-x-[50%] top-0 max-w-5xl w-full h-full mx-auto z-30">
+      <Container className="absolute left-[50%] right-[50%] -translate-x-[50%] top-0 max-w-5xl w-full h-full mx-auto -z-10">
         <LinesBg className="absolute left-0 top-0 w-full h-full" />
       </Container>
       {isMobile ? (
@@ -67,7 +67,6 @@ const Layout = (props: Props) => {
           clickables={["a", "select", "textarea", "button"]}
         />
       )}
-      <TilesLoader />
       <header
         className={`z-50 flex justify-center w-full flex-col h-[15vh] absolute top-0 left-0`}
       >
@@ -110,6 +109,7 @@ const Layout = (props: Props) => {
       />
       {children}
       <Footer />
+      <TilesLoader />
     </div>
   )
 }

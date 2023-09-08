@@ -99,6 +99,7 @@ const config: Config = {
       brand: "#4bffa5",
       bgBlack: "#101010",
       grey: "#b0b0b0",
+      greyLight: '#b0b0b033',
       greyStrong: "#1e1e1e",
     },
   },
