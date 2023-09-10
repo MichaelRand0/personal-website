@@ -4,8 +4,11 @@ import LinesBg from "$components/LinesBg"
 import LinkAnimated from "$components/LinkAnimated"
 import TilesLoader from "$components/TilesLoader"
 import Footer from "$components/footer/Footer"
+import JobModal from "$components/modals/JobModal"
+import Modal from "$components/modals/Modal"
 import Navigation from "$components/navigation/Navigation"
 import useMobile from "$hooks/mobile"
+import { useModal } from "$hooks/modal"
 import { useScroll } from "$hooks/scroll"
 import MobileMenu from "$modules/mobileMenu/MobileMenu"
 import dynamic from "next/dynamic"
@@ -43,6 +46,7 @@ const links = [
 const Layout = (props: Props) => {
   const { children } = props
   const { isMobile } = useMobile()
+  const {currentModal} = useModal()
   const [mobileMenu, setMobileMenu] = useState(false)
   const {scrollPosition} = useScroll()
   return (
@@ -111,7 +115,10 @@ const Layout = (props: Props) => {
       />
       {children}
       <Footer />
-      <TilesLoader />
+      {/* <TilesLoader /> */}
+      <Modal>
+        {currentModal?.name === 'Job' && <JobModal data={currentModal.payload} />}
+      </Modal>
     </div>
   )
 }

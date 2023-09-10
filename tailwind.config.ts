@@ -97,6 +97,7 @@ const config: Config = {
     },
     colors: {
       brand: "#4bffa5",
+      blackTransparent: '#000000c0',
       bgBlack: "#101010",
       grey: "#b0b0b0",
       greyLight: '#b0b0b033',
