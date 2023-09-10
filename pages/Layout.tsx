@@ -45,9 +45,6 @@ const Layout = (props: Props) => {
   const { isMobile } = useMobile()
   const [mobileMenu, setMobileMenu] = useState(false)
   const {scrollPosition} = useScroll()
-  useEffect(() => {
-    console.log('scrollPosition', scrollPosition)
-  }, [scrollPosition])
   return (
     <div className="">
       <Container className="absolute left-[50%] right-[50%] -translate-x-[50%] top-0 max-w-5xl w-full h-full mx-auto -z-10">

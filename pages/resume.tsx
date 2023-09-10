@@ -17,7 +17,7 @@ const Resume = () => {
           ]}
           currentRoute="Резюме"
         />
-        <section className="pt-32">
+        <section className="pt-20 md:pt-32">
           <Container className="max-w-5xl w-full mx-auto !px-0">
             <InfoCard className="w-full mb-20">
               <ResumeCard
