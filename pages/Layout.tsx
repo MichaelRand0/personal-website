@@ -46,9 +46,9 @@ const links = [
 const Layout = (props: Props) => {
   const { children } = props
   const { isMobile } = useMobile()
-  const {currentModal} = useModal()
+  const { currentModal } = useModal()
   const [mobileMenu, setMobileMenu] = useState(false)
-  const {scrollPosition} = useScroll()
+  const { scrollPosition } = useScroll()
   return (
     <div className="">
       <Container className="absolute left-[50%] right-[50%] -translate-x-[50%] top-0 max-w-5xl w-full h-full mx-auto -z-10">
@@ -74,7 +74,9 @@ const Layout = (props: Props) => {
         />
       )}
       <header
-        className={`z-50 flex justify-center w-full flex-col fixed top-0 left-0 bg-transparent transition-all ease-in-out duration-500 ${scrollPosition >= 200 ? 'h-[12vh] bg-bgBlack' : 'h-[18vh]'}`}
+        className={`z-50 flex justify-center w-full flex-col fixed top-0 left-0 bg-transparent transition-all ease-in-out duration-500 ${
+          scrollPosition >= 200 ? "h-[12vh] bg-bgBlack" : "h-[18vh]"
+        }`}
       >
         <Container className="flex justify-between">
           <LinkAnimated
@@ -116,9 +118,13 @@ const Layout = (props: Props) => {
       {children}
       <Footer />
       {/* <TilesLoader /> */}
-      <Modal>
-        {currentModal?.name === 'Job' && <JobModal data={currentModal.payload} />}
-      </Modal>
+      {currentModal && (
+        <Modal>
+          {currentModal?.name === "Job" && (
+            <JobModal data={currentModal.payload} />
+          )}
+        </Modal>
+      )}
     </div>
   )
 }
