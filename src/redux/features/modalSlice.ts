@@ -1,5 +1,6 @@
 import { Modal, ModalName } from "$models/Modal"
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
+import experience from "../../data/experience"
 
 interface IState {
   currentModal: Modal | null
@@ -8,19 +9,8 @@ interface IState {
 const initialState: IState = {
   currentModal: {
     name: "Job",
-    payload: {
-      date: {
-        simpleDate: '2022-2023',
-        from: 'Май 2022',
-        to: 'Апрель 2023'
-      },
-      position: "Фронтенд-разработчик",
-      company: "ООО Профискетч",
-      description:
-        "Разработка личного кабинета для онлайн-редактора BIM чертежей, разработка лэндингов, разработка онлайн-документации.",
-      logo: "/img/profi.png",
-    },
-  },
+    payload: experience[0]
+  }
 }
 
 export const modalSlice = createSlice({

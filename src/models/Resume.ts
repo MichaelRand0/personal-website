@@ -6,6 +6,12 @@ export type Experience = {
   company: string
   description: string
   logo?: string
+  team: string
+  stack: string
+  work?: {
+    img?: string
+    link: string
+  }
 }
 
 export type ExperienceDate = {
