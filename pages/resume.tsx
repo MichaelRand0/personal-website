@@ -1,10 +1,36 @@
 import Container from "$components/Container"
+import ProgressCircle from "$components/ProgressCircle"
 import JobCard from "$components/cards/JobCard"
 import ResumeCard from "$components/cards/ResumeCard"
 import SectionInfo from "$components/sections/SectionInfo"
 import SectionPreview from "$components/sections/SectionPreview"
 import { useModal } from "$hooks/modal"
 import experience from "../src/data/experience"
+
+const skills = [
+  {
+    title: "React",
+    progress: 85,
+    comments: [
+      "Хуки useState, useEffect, useMemo...",
+      "Redux, Redux Toolkit, RTKQuery",
+      "React Native, Expo и Native CLI",
+      "Next.js, SSR, SSG",
+      "Tailwindcss, Tailwind material UI",
+    ],
+  },
+  {
+    title: "React",
+    progress: 85,
+    comments: [
+      "Хуки useState, useEffect, useMemo...",
+      "Redux, Redux Toolkit, RTKQuery",
+      "React Native, Expo и Native CLI",
+      "Next.js, SSR, SSG",
+      "Tailwindcss, Tailwind material UI",
+    ],
+  },
+]
 
 const Resume = () => {
   const { setCurrentModal } = useModal()
@@ -44,7 +70,7 @@ const Resume = () => {
             />
           </Container>
         </section>
-        <SectionInfo title="Опыт работы">
+        <SectionInfo className="mb-28" title="Опыт работы">
           {experience.map((exp) => {
             return (
               <JobCard
@@ -59,6 +85,23 @@ const Resume = () => {
               />
             )
           })}
+        </SectionInfo>
+        <SectionInfo title="Технические умения">
+          <Container className="pt-14 bg-bgBlack border border-greyLight">
+            <div className="w-full flex items-center justify-center">
+            {skills.map((skill) => {
+              return (
+                <ProgressCircle
+                  progress={skill.progress}
+                  key={skill.title}
+                  className={`w-[${100 / skills.length}%] mr-20`}
+                  comments={skill.comments}
+                  title={skill.title}
+                />
+              )
+            })}
+            </div>
+          </Container>
         </SectionInfo>
       </div>
     </main>
