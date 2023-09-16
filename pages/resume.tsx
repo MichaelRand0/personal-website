@@ -9,10 +9,20 @@ import experience from "../src/data/experience"
 
 const skills = [
   {
-    title: "React",
-    progress: 85,
+    title: "JS/TS",
+    progress: 80,
     comments: [
-      "Хуки useState, useEffect, useMemo...",
+      "ES6-ES8, ООП, замыкания, рекурсия, методы массивов и объектов, Ajax...",
+      "TypeScript: типы данных, type и interface, generics, декораторы",
+      "JQuery",
+      "Инструменты сборки: Webpack, Gulp",
+    ],
+  },
+  {
+    title: "React",
+    progress: 75,
+    comments: [
+      "Хуки, VDOM, JSX, ф-ные и классовые компоненты, мемоизация...",
       "Redux, Redux Toolkit, RTKQuery",
       "React Native, Expo и Native CLI",
       "Next.js, SSR, SSG",
@@ -20,15 +30,38 @@ const skills = [
     ],
   },
   {
-    title: "React",
-    progress: 85,
+    title: "HTML/CSS",
+    progress: 95,
     comments: [
-      "Хуки useState, useEffect, useMemo...",
-      "Redux, Redux Toolkit, RTKQuery",
-      "React Native, Expo и Native CLI",
-      "Next.js, SSR, SSG",
-      "Tailwindcss, Tailwind material UI",
+      "Адаптивная и семантическая верстка",
+      "БЭМ",
+      "Flex, Grid",
+      "Препроцессоры SASS, LESS",
     ],
+  },
+  {
+    title: "Web",
+    progress: 60,
+    comments: [
+      "SEO оптимизация",
+      "Работа с хостингом",
+      "Создание виджетов для CRM-систем",
+      "Wordpress",
+    ],
+  },
+  {
+    title: "Angular",
+    progress: 45,
+    comments: [
+      "Роутинг, директивы, пайпы",
+      "RxJS",
+      "HttpClientModule, FormsModule и ReactiveFormsModule",
+    ],
+  },
+  {
+    title: "Vue",
+    progress: 35,
+    comments: ["Роутинг, работа с формами, директивы", "VueX"],
   },
 ]
 
@@ -88,18 +121,18 @@ const Resume = () => {
         </SectionInfo>
         <SectionInfo title="Технические умения">
           <Container className="pt-14 bg-bgBlack border border-greyLight">
-            <div className="w-full flex items-center justify-center">
-            {skills.map((skill) => {
-              return (
-                <ProgressCircle
-                  progress={skill.progress}
-                  key={skill.title}
-                  className={`w-[${100 / skills.length}%] mr-20`}
-                  comments={skill.comments}
-                  title={skill.title}
-                />
-              )
-            })}
+            <div className="w-full flex flex-col sm:flex-row flex-wrap justify-center">
+              {skills.map((skill) => {
+                return (
+                  <ProgressCircle
+                    progress={skill.progress}
+                    key={skill.title}
+                    className={`sm:w-[45%] sm:mr-10 even:mr-0 mb-12 md:mb-16`}
+                    comments={skill.comments}
+                    title={skill.title}
+                  />
+                )
+              })}
             </div>
           </Container>
         </SectionInfo>
