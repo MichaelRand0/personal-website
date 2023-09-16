@@ -1,11 +1,12 @@
 import Container from "$components/Container"
-import ProgressCircle from "$components/ProgressCircle"
+import ProgressCircle from "$components/progressBars/ProgressCircle"
 import JobCard from "$components/cards/JobCard"
 import ResumeCard from "$components/cards/ResumeCard"
 import SectionInfo from "$components/sections/SectionInfo"
 import SectionPreview from "$components/sections/SectionPreview"
 import { useModal } from "$hooks/modal"
 import experience from "../src/data/experience"
+import ProgressLine from "$components/progressBars/ProgressLine"
 
 const skills = [
   {
@@ -65,6 +66,19 @@ const skills = [
   },
 ]
 
+const languages = [
+  {
+    title: "Русский",
+    progress: 100,
+    comment: "родной",
+  },
+  {
+    title: "Английский",
+    progress: 30,
+    comment: "чтение документации и частичное понимание чужой речи",
+  },
+]
+
 const Resume = () => {
   const { setCurrentModal } = useModal()
   return (
@@ -119,7 +133,7 @@ const Resume = () => {
             )
           })}
         </SectionInfo>
-        <SectionInfo title="Технические умения">
+        <SectionInfo className="mb-28" title="Технические умения">
           <Container className="pt-14 bg-bgBlack border border-greyLight">
             <div className="w-full flex flex-col sm:flex-row flex-wrap justify-center">
               {skills.map((skill) => {
@@ -134,6 +148,21 @@ const Resume = () => {
                 )
               })}
             </div>
+          </Container>
+        </SectionInfo>
+        <SectionInfo className="mb-28" title="Знание языков">
+          <Container className="pt-10 pb-14 bg-bgBlack border border-greyLight">
+            {languages.map((lang) => {
+              return (
+                <ProgressLine
+                  className="mb-10 last:mb-0"
+                  key={lang.title}
+                  progress={lang.progress}
+                  title={lang.title}
+                  comment={lang.comment}
+                />
+              )
+            })}
           </Container>
         </SectionInfo>
       </div>
