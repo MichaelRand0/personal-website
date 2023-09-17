@@ -7,6 +7,11 @@ import SectionPreview from "$components/sections/SectionPreview"
 import { useModal } from "$hooks/modal"
 import experience from "../src/data/experience"
 import ProgressLine from "$components/progressBars/ProgressLine"
+import HobbyCard from "$components/cards/HobbyCard"
+import Chess from "$icons/Chess"
+import Cinema from "$icons/Cinema"
+import Math from "$icons/Math"
+import Sport from "$icons/Sport"
 
 const skills = [
   {
@@ -76,6 +81,73 @@ const languages = [
     title: "Английский",
     progress: 30,
     comment: "чтение документации и частичное понимание чужой речи",
+  },
+]
+
+const hobbies = [
+  {
+    title: "Шахматы",
+    icon: <Chess width={40} height={40} fill="#4bffa5" stroke={"#101010"} />,
+    text: (
+      <div className="flex flex-col justify-between items-center h-full">
+        <span className="mb-4">
+          Шахматы для меня это не просто игра. Это способ тренировать свое
+          мышление, мыслить в разных направлениях. В каком-то смысле, это
+          определенный подход к жизни.
+        </span>
+
+        <a
+          className="text-brand border-b border-brand hover:border-[transparent]"
+          target="_blank"
+          href="https://lichess.org/@/LunaMoon2022"
+        >
+          Мой lichess-профиль
+        </a>
+      </div>
+    ),
+  },
+  {
+    title: "Кино",
+    icon: <Cinema width={40} height={40} fill="#4bffa5" stroke={"#101010"} />,
+    text: (
+      <div className="flex flex-col justify-between items-center h-full">
+        <span className="mb-4">
+          В свободное время я увлекаюсь кинематографом. Не просто смотрю фильмы,
+          а изучаю их. Люблю старые американские нуары, интересуюсь творчеством
+          Дэвида Линча.
+        </span>
+        <a
+          className="text-brand border-b border-brand hover:border-[transparent]"
+          target="_blank"
+          href="https://t.me/plenka_kino"
+        >
+          Веду свой телеграмм-канал
+        </a>
+      </div>
+    ),
+  },
+  {
+    title: "Математика",
+    icon: <Math width={40} height={40} fill="#4bffa5" stroke={"#101010"} />,
+    text: (
+      <span>
+        Хорошему программисту важно иметь хорошие аналитические способности и
+        держать свой интеллект в постоянной натренированности. Поэтому каждый
+        день я отвожу время для изучения математики.
+      </span>
+    ),
+  },
+  {
+    title: "Спорт",
+    icon: <Sport width={40} height={40} fill="#4bffa5" stroke={"#101010"} />,
+    text: (
+      <span>
+        Невозможно постоянно развиваться интеллектуально, если твое тело
+        слабеет. Физические нагрузки это то, что держит наш организм в
+        стабильности. Поэтому время от времени я отвожу время бегу и легким
+        силовым тренировкам.
+      </span>
+    ),
   },
 ]
 
@@ -163,6 +235,23 @@ const Resume = () => {
                 />
               )
             })}
+          </Container>
+        </SectionInfo>
+        <SectionInfo className="mb-28" title="Хобби">
+          <Container className="pt-10 pb-14 bg-bgBlack border border-greyLight">
+            <div className="flex flex-wrap justify-center flex-col md:flex-row">
+              {hobbies.map((hobby) => {
+                return (
+                  <HobbyCard
+                    className="w-full md:w-[45%] mb-10 mr-10 even:mr-0"
+                    key={hobby.title}
+                    title={hobby.title}
+                    text={hobby.text}
+                    icon={hobby.icon}
+                  />
+                )
+              })}
+            </div>
           </Container>
         </SectionInfo>
       </div>
