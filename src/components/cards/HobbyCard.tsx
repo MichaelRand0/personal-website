@@ -16,7 +16,7 @@ const HobbyCard = (props: Props) => {
           {title}
         </h5>
       </div>
-      <p className="text-base text-grey text-center h-full">{text}</p>
+      <div className="text-base text-grey text-center h-full">{text}</div>
     </div>
   )
 }

@@ -100,6 +100,7 @@ const config: Config = {
       blackTransparent: '#000000c0',
       bgBlack: "#101010",
       grey: "#b0b0b0",
+      greyDark: '#8c8c8c',
       greyLight: '#b0b0b033',
       greyStrong: "#1e1e1e",
     },

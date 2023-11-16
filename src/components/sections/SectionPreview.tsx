@@ -26,7 +26,7 @@ function SectionPreview(props: Props) {
       <GrainBg />
       <Container className="flex flex-col w-full justify-between h-full max-w-5xl mx-auto">
         <span></span>
-        <h1 className="text-6xl sm:text-8xl lg:text-9xl text-center font-medium">
+        <h1 className="max-[380px]:text-5xl text-6xl sm:text-8xl lg:text-9xl text-center font-medium">
           {showTitle ? <Typewriter typeSpeed={360} words={[title]} /> : ""}
         </h1>
         <div className="flex items-center justify-between">

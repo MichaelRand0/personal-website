@@ -1,4 +1,4 @@
-export type ModalName = 'Job' | null
+export type ModalName = 'Job' | 'Work' | 'EmailSuccess' | null
 export type Modal = {
   name: ModalName
   payload: any

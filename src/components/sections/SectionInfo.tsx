@@ -9,7 +9,7 @@ function SectionInfo(props: Props) {
   return (
     <section>
       <Container className={`max-w-5xl w-full mx-auto !px-0 ${className}`}>
-        <h2 className="text-3xl w-full mb-8 font-medium pl-10">{title}</h2>
+        <h2 className="sm:text-3xl text-2xl w-full mb-8 font-medium pl-5 sm:pl-10">{title}</h2>
         {children}
       </Container>
     </section>
