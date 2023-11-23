@@ -53,7 +53,7 @@ const config: Config = {
             top: '0px'
           },
           "100%": {
-            top: '-300vh'
+            top: '-100vh'
           },
         },
         jumping: {

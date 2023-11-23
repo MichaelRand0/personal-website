@@ -4,17 +4,6 @@ import Telegram from "$icons/Telegram"
 
 interface Props extends React.ComponentProps<"div"> {}
 
-const socials = [
-  {
-    link: "https://github.com/MichaelRand0",
-    Content: <Github width={33} height={33} />,
-  },
-  {
-    link: "https://t.me/MichaelRand",
-    Content: <Telegram width={36} height={36} />,
-  },
-]
-
 const Footer = (props: Props) => {
   const { children } = props
   return (
@@ -35,7 +24,7 @@ const Footer = (props: Props) => {
             </div>
             {children}
           </div>
-          <div className="lg:absolute right-0 bottom-0">
+          {/* <div className="lg:absolute right-0 bottom-0">
             <div className="flex lg:flex-col justify-center items-center">
               {socials.map((social) => {
                 return (
@@ -50,7 +39,7 @@ const Footer = (props: Props) => {
                 )
               })}
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </footer>
