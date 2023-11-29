@@ -28,8 +28,8 @@ const JobModal = (props: Props) => {
     <div>
       <div className="flex mb-8 w-full sm:flex-row flex-col">
         {data?.logo && 
-        <div className="bg-[white] p-3 sm:mb-0 mb-5 w-[200px] h-[70px] sm:w-[300px] sm:h-[100px] mr-10 flex items-center justify-center rounded">
-          <img className="w-full h-full" src={data?.logo} alt="job logo" />
+        <div className="bg-[white] p-3 sm:mb-0 mb-5 max-h-[240px] max-w-[300px] mr-10 flex items-center justify-center rounded">
+          <img className="w-full h-full object-cover" src={data?.logo} alt="job logo" />
         </div>}
         <div>
           <h4 className="text-2xl text-grey mb-2">{data.company}</h4>

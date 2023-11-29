@@ -8,9 +8,13 @@ import "swiper/css";
 import { useEffect, useState } from "react";
 import WorkModal from "$components/modals/WorkModal";
 import { useModal } from "$hooks/modal";
+import useGithub from "$hooks/github";
 
 const Works = () => {
   const [randomHeights, setRandomHeight] = useState<number[]>([]);
+  const {getUserRepos} = useGithub()
+  const repos = getUserRepos('MichaelRand0')
+  console.log('repos', repos)
   useEffect(() => {
     if (window) {
       setRandomHeight(

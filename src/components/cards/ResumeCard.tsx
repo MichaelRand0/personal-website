@@ -20,7 +20,7 @@ const ResumeCard = (props: Props) => {
       <div className={`flex md:flex-row flex-col items-center justify-between`}>
         {img && (
           <div className="max-w-[140px] mb-7 md:mb-0 lg:max-w-[160px] w-full md:mr-3 lg:mr-10">
-            <img className="w-full h-full object-cover" src={img} alt="Photo" />
+            <img className="w-[260px] h-[260px] object-cover" src={img} alt="Photo" />
           </div>
         )}
         <div className="flex flex-col items-center justify-center text-center md:text-start md:block">

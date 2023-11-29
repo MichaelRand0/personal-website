@@ -3,7 +3,21 @@ import { Experience } from "$models/Resume"
 const experience: Experience[] = [
   {
     date: {
-      simpleDate: "2022-2023",
+      simpleDate: "2023 - настоящее время",
+      from: "Октябрь 2023",
+      to: "Настоящее время",
+    },
+    position: "Фронтенд-разработчик",
+    company: "Combo agency",
+    description:
+      "Разработка лэндингов и интернет-магазинов для ресторанного бизнеса.",
+    logo: "/img/combo.jpg",
+    team: "3 фронтенд-разработчика, 2 бэкенд-разработчика, 1 дизайнер, 1 тестировщик",
+    stack: "Vue 3, TypeScript, SCSS, Vite, Bitrix Framework, Laravel"
+  },
+  {
+    date: {
+      simpleDate: "2022 - 2023",
       from: "Май 2022",
       to: "Апрель 2023",
     },
@@ -21,7 +35,7 @@ const experience: Experience[] = [
   },
   {
     date: {
-      simpleDate: "2022-2022",
+      simpleDate: "2022 - 2022",
       from: "Апрель 2022",
       to: "Май 2022",
     },
@@ -34,7 +48,7 @@ const experience: Experience[] = [
   },
   {
     date: {
-      simpleDate: "2021-2022",
+      simpleDate: "2021 - 2022",
       from: "Сентябрь 2021",
       to: "Март 2022",
     },
